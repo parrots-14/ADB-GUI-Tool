@@ -11,3 +11,5 @@ Reboot Recovery - Reboots the phone into recovery.
 Reboot Fastboot - Reboots the phone into fastboot.
 ### Debugging
 Logcat - Gives you a constant log of what's happening in the phone. Note that from my experience, there's no way to stop this except for unplugging the phone or closing the app.
+## How can I see the output?
+When you open the .py file, you should get py.exe, or something resembling Command Prompt. From there, you will be able to see the output.
