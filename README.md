@@ -34,7 +34,7 @@ Reconnect offline - Resets offline devices, forcing it to reconnect
 ## How can I see the output?
 When you open the .py file, you should get py.exe, or something resembling Command Prompt. From there, you will be able to see the output.
 
-## Debugging
+## Troubleshooting
 Waiting for device / Device not found - Ensure you have the device plugged in, and USB Debugging enabled. To enable this, go to Settings > About Phone > Build Number (Tap 7 times) > Go back to Settings Menu > Developer Options. From there, enable USB debugging. The process may be different for different phones, but it typically involves this process. You'll have to trust the device too when you plug it in.
 
 Killing the server with the 'Kill Server' button then starting it can fix issues with running commands sometimes.
