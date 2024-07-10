@@ -31,6 +31,20 @@ Reconnect device - Kicks the device, forcing it to reconnect
 
 Reconnect offline - Resets offline devices, forcing it to reconnect
 
+## What commands will be added?
+
+ADB Install - Command implemented, working on adding arguments to get the path to APK, coming in 1.2
+
+ADB Uninstall - Not implemented, coming in 1.2
+
+ADB Sideload - Not implemented, coming in 1.2
+
+ADB Push - Not implemented
+
+ADB Pull - Not implemented
+
+I plan on adding more, but those are the ones that are going to be added soon.
+
 ## How can I see the output?
 When you open the .py file, you should get py.exe, or something resembling Command Prompt. From there, you will be able to see the output.
 
