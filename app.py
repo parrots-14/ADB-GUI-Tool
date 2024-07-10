@@ -1,14 +1,11 @@
-# Generated with tkedit (tkedit.glitch.me)
-
-import tkinter as tk
-from tkinter import ttk
-from tkinter import * 
+from tkinter import *
+import customtkinter
+import customtkinter as ctk
 import subprocess
 from subprocess import call
 
 def reboot():
 	call("adb reboot")
-
 
 def rebootrecovery():
 	call("adb reboot recovery")
@@ -22,9 +19,6 @@ def logcat():
 
 def getstatedevice():
 	call("adb get-state device")
-    
-def getstatebootloader():
-	call("adb get-state bootloader")
     
 def getsn():
 	call("adb get-serialno")
@@ -47,54 +41,30 @@ def reconnectdevice():
 def reconnectoffline():
 	call("adb reconnect offline")
 
+customtkinter.set_appearance_mode("dark")
+customtkinter.set_default_color_theme("dark-blue")
 
-root = Tk()
-
-root.geometry('890x590')
-root.configure(background='#282828')
-root.title('ADB GUI Tool')
-
-
-Label(root, text='Scripting', fg='#FFFFFF', bg='#282828', font=('arial', 12, 'normal')).place(x=20, y=0)
+app = ctk.CTk()
+app.title('ADB GUI Tool')
+app.geometry('890x590')
 
 
-Button(root, text='Reboot', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=reboot).place(x=20, y=30)
+# ADB Scripting Tab
+scriptingLabel = ctk.CTkLabel(app, text="Scripting").place(x=20, y=0)
+rebootButton = customtkinter.CTkButton(app, text="Reboot", command=reboot).place(x=20, y=30)
+rebootRecoveryButton = customtkinter.CTkButton(app, text="Reboot to Recovery", command=rebootrecovery).place(x=200, y=30)
+rebootFastbootButton = customtkinter.CTkButton(app, text="Reboot to Fastboot", command=rebootfastboot).place(x=380, y=30)
+stateDeviceButton = customtkinter.CTkButton(app, text="Get State", command=getstatedevice).place(x=560, y=30)
+getSNButton = customtkinter.CTkButton(app, text="Get Serial Number", command=getsn).place(x=740, y=30)
+
+# ADB Debugging & Internal Debugging Tab
+debuggingLabel = ctk.CTkLabel(app, text="Debugging").place(x=20, y=60)
+logcatButton = customtkinter.CTkButton(app, text="Logcat", command=logcat).place(x=20, y=90)
+startServerButton = customtkinter.CTkButton(app, text="Start ADB Server", command=startserver).place(x=200, y=90)
+killServerButton = customtkinter.CTkButton(app, text="Kill ADB Server", command=killserver).place(x=380, y=90)
+reconnectHostButton = customtkinter.CTkButton(app, text="Reconnect Host", command=reconnecthost).place(x=560, y=90)
+reconnectDeviceButton = customtkinter.CTkButton(app, text="Reconnect Device", command=reconnecthost).place(x=740, y=90)
+reconnectOfflineButton = customtkinter.CTkButton(app, text="Reconnect Offline", command=reconnectoffline).place(x=20, y=130)
 
 
-Button(root, text='Reboot to Recovery', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=rebootrecovery).place(x=120, y=30)
-
-
-Button(root, text='Reboot to Fastboot', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=rebootfastboot).place(x=310, y=30)
-
-
-Button(root, text='Get-State Device', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=getstatedevice).place(x=500, y=30)
-
-
-Button(root, text='Get-State Bootloader', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=getstatebootloader).place(x=690, y=30)
-
-
-Button(root, text='Get Serial Number', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=getsn).place(x=20, y=75)
-
-
-Label(root, text='Debugging', fg='#FFFFFF', bg='#282828', font=('arial', 12, 'normal')).place(x=20, y=110)
-
-
-Button(root, text='Logcat', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=logcat).place(x=20, y=140)
-
-
-Button(root, text='Start ADB Server', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=startserver).place(x=120, y=140)
-
-
-Button(root, text='Kill ADB Server', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=killserver).place(x=290, y=140)
-
-
-Button(root, text='Reconnect', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=reconnecthost).place(x=440, y=140)
-
-
-Button(root, text='Reconnect Device', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=reconnectdevice).place(x=555, y=140)
-
-
-Button(root, text='Reconnect Offline', bg='#181818', fg='#FFFFFF', font=('arial', 12, 'normal'), command=reconnectoffline).place(x=720, y=140)
-
-
-root.mainloop()
+app.mainloop()
