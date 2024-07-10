@@ -6,6 +6,7 @@ This is a tool utilizing Python to run ADB commands in a standalone app, instead
 For starters, you'll need to install ADB and Python.
 
 From there, you need to open Command Prompt in the directory that you have the .py file opened in, and run 'python app.py.' The command prompt also serves as a way to view the output, so don't close it.
+
 ## What commands are currently implemented, and what do they do?
 ### Scripting
 Reboot - Just reboots the phone.
@@ -17,6 +18,8 @@ Reboot Fastboot - Reboots the phone into fastboot.
 Get State Device - Prints the state that the phone is in. (recovery, device, etc.)
 
 Get Serial Number - Prints the device's serial number.
+
+Root - Gives ADB root access.
 
 ### Debugging
 Logcat - Gives you a constant log of what's happening in the phone. Note that from my experience, there's no way to stop this except for unplugging the phone or closing the app.
@@ -31,22 +34,26 @@ Reconnect device - Kicks the device, forcing it to reconnect
 
 Reconnect offline - Resets offline devices, forcing it to reconnect
 
-## What commands will be added?
+### File Transfer
 
-ADB Install - Command implemented, working on adding arguments to get the path to APK, coming in 1.2
+Install APK - Installs the APK. Use the first argument entry box for the path.
 
-ADB Uninstall - Not implemented, delayed
+Push - Pushes a file to a directory in the device. Use the first argument for the path to the file on the PC, then the second argument for the path on the android device.
 
-ADB Sideload - Not implemented, coming in 1.2
+Pull - Pulls a file from the device to the computer. Use the first argument for the path to the file on the device.
 
-ADB Push - Not implemented, coming in 1.2
+Remount - Remounts the device.
 
-ADB Pull - Not implemented, coming in 1.2
+Sideload - Sideloads ZIP files on the device. Make sure your device is on sideload mode. If you wanna check, use getstate.
 
-I plan on adding more, but those are the ones that are going to be added soon.
+## What commands could come soon?
+### Tentative
+ADB Shell and other commands that rely on it - I'm unsure if I'm going to add this, because everytime that I add this and run the command, it ends up crashing.
+### Likely
+None at the moment
 
 ## How can I see the output?
-When you open the .py file, you should get py.exe, or something resembling Command Prompt. From there, you will be able to see the output.
+When you use CMD to open the .py file, the CMD will display the output.
 
 ## Troubleshooting
 Waiting for device / Device not found - Ensure you have the device plugged in, and USB Debugging enabled. To enable this, go to Settings > About Phone > Build Number (Tap 7 times) > Go back to Settings Menu > Developer Options. From there, enable USB debugging. The process may be different for different phones, but it typically involves this process. You'll have to trust the device too when you plug it in.
