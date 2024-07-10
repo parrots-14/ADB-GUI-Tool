@@ -3,7 +3,9 @@ This app is still being developed, so expect more content.
 ## What is this?
 This is a tool utilizing Python to run ADB commands in a standalone app, instead of the terminal. This is meant for beginners to ADB, but can be used by anyone.
 ## How do I set this up?
-All you have to do is install ADB and Python. From there, you can just open the .py and you should be able to be running ADB commands.
+For starters, you'll need to install ADB and Python.
+
+From there, you need to open Command Prompt in the directory that you have the .py file opened in, and run 'python app.py.' The command prompt also serves as a way to view the output, so don't close it.
 ## What commands are currently implemented, and what do they do?
 ### Scripting
 Reboot - Just reboots the phone.
@@ -12,7 +14,7 @@ Reboot Recovery - Reboots the phone into recovery.
 
 Reboot Fastboot - Reboots the phone into fastboot.
 
-Get State Device / Bootloader - Prints the state that the phone is in. (recovery, device, etc.)
+Get State Device - Prints the state that the phone is in. (recovery, device, etc.)
 
 Get Serial Number - Prints the device's serial number.
 
@@ -33,6 +35,6 @@ Reconnect offline - Resets offline devices, forcing it to reconnect
 When you open the .py file, you should get py.exe, or something resembling Command Prompt. From there, you will be able to see the output.
 
 ## Debugging
-Ensure you have USB Debugging enabled. To enable this, go to Settings > About Phone > Build Number (Tap 7 times) > Go back to Settings Menu > Developer Options. From there, enable USB debugging. The process may be different for different phones, but it typically involves this process. You'll have to trust the device too when you plug it in.
+Waiting for device - Ensure you have the device plugged in, and USB Debugging enabled. To enable this, go to Settings > About Phone > Build Number (Tap 7 times) > Go back to Settings Menu > Developer Options. From there, enable USB debugging. The process may be different for different phones, but it typically involves this process. You'll have to trust the device too when you plug it in.
 
 Killing the server with the 'Kill Server' button then starting it can fix issues with running commands sometimes.
