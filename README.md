@@ -35,13 +35,13 @@ Reconnect offline - Resets offline devices, forcing it to reconnect
 
 ADB Install - Command implemented, working on adding arguments to get the path to APK, coming in 1.2
 
-ADB Uninstall - Not implemented, coming in 1.2
+ADB Uninstall - Not implemented, delayed
 
 ADB Sideload - Not implemented, coming in 1.2
 
-ADB Push - Not implemented
+ADB Push - Not implemented, coming in 1.2
 
-ADB Pull - Not implemented
+ADB Pull - Not implemented, coming in 1.2
 
 I plan on adding more, but those are the ones that are going to be added soon.
 
