@@ -1,5 +1,5 @@
 # ADB GUI Tool
-This app is still being developed, so expect more content.
+Note that this tool may be unstable, and I am not responsible if you brick your device.
 ## What is this?
 This is a tool utilizing Python to run ADB commands in a standalone app, instead of the terminal. This is meant for beginners to ADB, but can be used by anyone.
 ## How do I set this up?
