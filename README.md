@@ -50,7 +50,9 @@ Sideload - Sideloads ZIP files on the device. Make sure your device is on sidelo
 ### Tentative
 ADB Shell and other commands that rely on it - I'm unsure if I'm going to add this, because everytime that I add this and run the command, it ends up crashing.
 ### Likely
-None at the moment
+Reboot Bootloader - Reboots into bootloader, sometimes works for other devices that just reboot to system when you run reboot to fastboot. Coming soon
+Devices - Easy to implement, coming soon
+Fastboot tab - Coming soon
 
 ## How can I see the output?
 When you use CMD to open the .py file, the CMD will display the output.
