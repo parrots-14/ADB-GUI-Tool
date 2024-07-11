@@ -46,15 +46,29 @@ Remount - Remounts the device.
 
 Sideload - Sideloads ZIP files on the device. Make sure your device is on sideload mode. If you wanna check, use getstate.
 
+### Fastboot Basics
+
+View Devices - Shows devices currently connected in fastboot
+
+Reboot - Reboots to system
+
+Reboot to Recovery - Reboots to recovery
+
+### Fastboot unlocking / locking bootloader
+
+Unlock Bootloader - Unlocks the bootloader, allowing unsigned firmware to be flashed
+
+Lock Bootloader - Locks the bootloader, checking if the firmware is signed. MAKE SURE YOU ARE COMPLETELY BACK TO STOCK BEFORE RUNNING THIS
+
+Critical Unlock Bootloader - Unlocks critical bootloader partitions
+
+Critical Lock Bootloader - Locks critical bootloader partitions.
+
 ## What commands could come soon?
 ### Tentative
 ADB Shell and other commands that rely on it - I'm unsure if I'm going to add this, because everytime that I add this and run the command, it ends up crashing.
 ### Likely
-Reboot Bootloader - Reboots into bootloader, sometimes works for other devices that just reboot to system when you run reboot to fastboot. Coming in 1.3
-
-Devices - Easy to implement, coming in 1.3
-
-Fastboot tab - Likely coming in 1.3
+None at the moment
 
 ## How can I see the output?
 When you use CMD to open the .py file, the CMD will display the output.
@@ -63,3 +77,5 @@ When you use CMD to open the .py file, the CMD will display the output.
 Waiting for device / Device not found - Ensure you have the device plugged in, and USB Debugging enabled. To enable this, go to Settings > About Phone > Build Number (Tap 7 times) > Go back to Settings Menu > Developer Options. From there, enable USB debugging. The process may be different for different phones, but it typically involves this process. You'll have to trust the device too when you plug it in.
 
 Killing the server with the 'Kill Server' button then starting it can fix issues with running commands sometimes.
+
+Fastboot is currently very unstable, but if the app crashes the commands should still run.
