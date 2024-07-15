@@ -1,6 +1,7 @@
 from tkinter import *
 import customtkinter as ctk
 from subprocess import call
+from subprocess import Popen
 
 # Made by parrots-14 on Github
 
@@ -50,6 +51,17 @@ def rebootbootloader():
 def devices():
     call("adb devices")
 
+# Shell
+
+def shell():
+    Popen(["adb", "shell"])
+    
+def androidversion():
+    Popen(["adb", "shell", "getprop", "ro.build.version.release"])
+    
+def getapps():
+    Popen(["adb", "shell", "list", "packages", "-r"])
+
 ## Commands that have arguments
 def install():
     arg = argument.get()
@@ -67,28 +79,32 @@ def push():
 def sideload():
     arg = argument.get()
     call(f"adb sideload {arg}")
-    
+
+def uninstall():
+    arg = argument.get()
+    call(f"adb uninstall {arg}")
+
 # Fastboot button commands
 def fastboot_devices():
-    call("fastboot devices")
+    Popen(["fastboot", "devices"])
     
 def fastboot_reboot():
-    call("fastboot reboot")
+    Popen(["fastboot", "reboot"])
     
 def fastboot_reboot_recovery():
-    call("fastboot reboot recovery")
+    Popen(["fastboot", "reboot", "recovery"])
     
 def fastboot_unlock():
-    call("fastboot flashing unlock")
+    Popen(["fastboot", "flashing", "unlock"])
     
 def fastboot_lock():
-    call("fastboot flashing lock")
+    Popen(["fastboot", "flashing", "lock"])
     
 def fastboot_critical_unlock():
-    call("fastboot flashing unlock_critical")
+    Popen(["fastboot", "flashing", "unlock_critical"])
     
 def fastboot_critical_lock():
-    call("fastboot flashing lock_critical")
+    Popen(["fastboot", "flashing", "lock_critical"])
 
 # Setting appearance and theme
 ctk.set_appearance_mode("dark")
@@ -139,6 +155,13 @@ pushButton = ctk.CTkButton(tab_1, text="Push", command=push).place(x=190, y=230)
 pullButton = ctk.CTkButton(tab_1, text="Pull", command=pull).place(x=370, y=230)
 remountButton = ctk.CTkButton(tab_1, text="Remount", command=remount).place(x=550, y=230)
 sideloadButton = ctk.CTkButton(tab_1, text="Sideload", command=sideload).place(x=730, y=230)
+
+# Shell
+shellLabel = ctk.CTkLabel(tab_1, text="ADB Shell Commands").place(x=10, y=260)
+shellButton = ctk.CTkButton(tab_1, text="Run ADB Shell", command=shell).place(x=10, y=290)
+uninstallButton = ctk.CTkButton(tab_1, text="Uninstall App", command=uninstall).place(x=190, y=290)
+appsButton = ctk.CTkButton(tab_1, text="List Packages", command=getapps).place(x=370, y=290)
+androidVersionButton = ctk.CTkButton(tab_1, text="Get Android Version", command=androidversion).place(x=550, y=290)
 
 # Arguments in UI for Tab 1
 argumentLabel1 = ctk.CTkLabel(tab_1, text="Arguments").place(x=10, y=460)
