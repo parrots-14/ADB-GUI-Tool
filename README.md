@@ -66,7 +66,7 @@ Critical Lock Bootloader - Locks critical bootloader partitions.
 
 ## What commands could come soon?
 ### Tentative
-ADB Shell and other commands that rely on it - I'm unsure if I'm going to add this, because everytime that I add this and run the command, it ends up crashing.
+None at the moment
 ### Likely
 None at the moment
 
