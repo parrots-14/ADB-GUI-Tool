@@ -3,7 +3,7 @@ Note that this tool may be unstable, and I am not responsible if you brick your 
 ## What is this?
 This is a tool utilizing Python to run ADB commands in a standalone app, instead of the terminal. This is meant for beginners to ADB, but can be used by anyone.
 ## How do I set this up?
-For starters, you'll need to install ADB and Python.
+All you need is ADB, Python, and CustomTKinter.
 
 From there, you need to open Command Prompt in the directory that you have the .py file opened in, and run 'python app.py.' The command prompt also serves as a way to view the output, so don't close it.
 
