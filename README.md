@@ -5,12 +5,12 @@ This is a tool utilizing Python to run ADB commands in a standalone app, instead
 ## How do I set this up?
 The setup is probably gonna be different for operating systems other than Windows. However, what does apply globally is that you MUST have Python installed.
 
-# Windows
+### Windows
 1. Run 'setup.bat' so that it installs a dependency needed for the program
 2. Open CMD and get into the directory that the app is in
 3. Run 'python app.py'
 
-# Operating systems other than windows
+### Operating systems other than windows
 1. Delete EVERYTHING in the app except for 'app.py.' The setup script is only for Windows, and only installs a dependency which can be manually installed. The rest of the files are the ADB dependencies for Windows.
 2. Open up your terminal and run 'pip install customtkinter'
 3. Install ADB onto your device.
