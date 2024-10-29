@@ -10,7 +10,7 @@ The setup is probably gonna be different for operating systems other than Window
 2. Open CMD and get into the directory that the app is in
 3. Run 'python app.py'
 
-### Operating systems other than windows
+### Linux, MacOS (hopefully), etc.
 1. Delete EVERYTHING in the app except for 'app.py.' The setup script is only for Windows, and only installs a dependency which can be manually installed. The rest of the files are the ADB dependencies for Windows.
 2. Open up your terminal and run 'pip install customtkinter'
 3. Install ADB onto your device.
