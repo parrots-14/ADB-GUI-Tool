@@ -1,5 +1,5 @@
 # ADB GUI Tool
-Note that this tool may be unstable, and I am not responsible if you brick your device.
+Note that this tool MAY brick your phone if you don't know what you're doing. Additionally, if you're on an operating system other than Windows, check the "How do I set this up?" area.
 ## What is this?
 This is a tool utilizing Python to run ADB commands in a standalone app, instead of the terminal. This is meant for beginners to ADB, but can be used by anyone.
 ## How do I set this up?
