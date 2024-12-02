@@ -1,5 +1,5 @@
 # ADB GUI Tool
-Note that this tool MAY brick your phone if you don't know what you're doing. Additionally, if you're on an operating system other than Windows, check the "How do I set this up?" area.
+Note that this tool has a very minimal chance to brick your phone if you don't know what you're doing. Additionally, if you're on an operating system other than Windows, check the "How do I set this up?" area.
 ## What is this?
 This is a tool utilizing Python to run ADB commands in a standalone app, instead of the terminal. This is meant for beginners to ADB, but can be used by anyone.
 ## How do I set this up?
@@ -13,9 +13,9 @@ The setup is probably gonna be different for operating systems other than Window
 
 ### Linux, MacOS (hopefully), etc.
 1. Unzip
-2. Delete EVERYTHING in the app except for 'app.py.' The setup script is only for Windows, and only installs a dependency which can be manually installed. The rest of the files are the ADB dependencies for Windows.
+2. Delete EVERYTHING in the app except for 'app.py.' The setup script is only for Windows, and installs a dependency which can be manually installed. The rest of the files are the ADB dependencies for Windows.
 3. Open up your terminal and run 'pip install customtkinter'
-4. Install ADB onto your device.
+4. Install ADB onto your computer.
 5. Run the python script, and it should launch.
 
 ## What commands are currently implemented, and what do they do?
@@ -85,7 +85,10 @@ None at the moment
 When you use CMD to open the .py file, the CMD will display the output.
 
 ## Troubleshooting
-Waiting for device / Device not found - Ensure you have the device plugged in, and USB Debugging enabled. To enable this, go to Settings > About Phone > Build Number (Tap 7 times) > Go back to Settings Menu > Developer Options. From there, enable USB debugging. The process may be different for different phones, but it typically involves this process. You'll have to trust the device too when you plug it in.
+### Waiting for device / Device not found
+Ensure you have the device plugged in, and USB Debugging enabled. To enable this, go to Settings > About Phone > Build Number (Tap 7 times) > Go back to Settings Menu > Developer Options. From there, enable USB debugging. The process may be different for different phones, but it typically involves this process. You'll have to trust the device too when you plug it in.
+### ADB server error
+This indicates that your ADB server is outdated. For Windows, delete everything in the directory except for the tool script itself, and then paste the platform tools ZIP into the directory and unzip it. For Linux, just run 'sudo apt-get install android-sdk-platform-tools' if on a Debian based distribution, or 'sudo dnf install android-tools' for Fedora based distributions.
 
 Killing the server with the 'Kill Server' button then starting it can fix issues with running commands sometimes.
 
