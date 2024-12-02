@@ -89,7 +89,3 @@ When you use CMD to open the .py file, the CMD will display the output.
 Ensure you have the device plugged in, and USB Debugging enabled. To enable this, go to Settings > About Phone > Build Number (Tap 7 times) > Go back to Settings Menu > Developer Options. From there, enable USB debugging. The process may be different for different phones, but it typically involves this process. You'll have to trust the device too when you plug it in.
 ### ADB server error
 This indicates that your ADB server is outdated. For Windows, delete everything in the directory except for the tool script itself, and then paste the platform tools ZIP into the directory and unzip it. For Linux, just run 'sudo apt-get install android-sdk-platform-tools' if on a Debian based distribution, or 'sudo dnf install android-tools' for Fedora based distributions.
-
-Killing the server with the 'Kill Server' button then starting it can fix issues with running commands sometimes.
-
-Fastboot is currently very unstable, but if the app crashes the commands should still run.
