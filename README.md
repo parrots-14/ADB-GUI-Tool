@@ -1,9 +1,9 @@
 # ADB GUI Tool
-Note that this tool has a very minimal chance to brick your phone if you don't know what you're doing. Additionally, if you're on an operating system other than Windows, check the "How do I set this up?" area.
+Note that this tool has a chance to brick your phone if you don't know what you're doing.
 ## What is this?
-This is a tool utilizing Python to run ADB commands in a standalone app, instead of the terminal. This is meant for beginners to ADB, but can be used by anyone.
+This is a tool utilizing Python to run ADB commands in a standalone app, instead of the terminal.
 ## How do I set this up?
-The setup is probably gonna be different for operating systems other than Windows. However, what does apply globally is that you MUST have Python installed.
+See below - only dependency is Python and customtkinter (requires manual install on operating systems other than windows.)
 
 ### Windows
 1. Unzip
@@ -33,7 +33,7 @@ Get Serial Number - Prints the device's serial number.
 Root - Gives ADB root access.
 
 ### Debugging
-Logcat - Gives you a constant log of what's happening in the phone. Note that from my experience, there's no way to stop this except for unplugging the phone or closing the app.
+Logcat - Gives you a constant log of what's happening in the phone. Stop by pressing Ctrl + C.
 
 Start Server - Starts the ADB server.
 
